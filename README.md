@@ -50,11 +50,11 @@ From the top drop-down menu, select `kernel > change kernel > aps_march_covalent
 After successfully creating the conda environment, the Covalent server can be started as follows
 
 ```bash
-covalent start --ignore-migrations
+covalent start
 ```
 
 Covalent can optionally be started in debug mode for more verbose logging as follows
 
 ```bash
-covalent start -d --ignore-migrations
+covalent start -d
 ```
