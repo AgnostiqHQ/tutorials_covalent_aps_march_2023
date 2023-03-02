@@ -1,0 +1,6 @@
+name: aps_march_covalent
+dependencies:
+  - python=3.8
+  - pip
+  - pip:
+    - -r requirements.txt
