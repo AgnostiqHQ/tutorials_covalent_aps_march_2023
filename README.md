@@ -1,60 +1,63 @@
 # APS March 2023: Covalent Workshop
 
 <div align="center">
-
 <img src="https://raw.githubusercontent.com/AgnostiqHQ/covalent/master/doc/source/_static/covalent_readme_banner.svg" width=150%>
-
 </div>
 
-This repository contains all the of the needed material to complete the `covalent` workshop hosted at APS March 2023, Las Vegas, Nevada.
+This repository contains materials for the [Covalent](https://github.com/AgnostiqHQ/covalent) workshop hosted at APS March 2023, Las Vegas, Nevada.
 
-You will find:
+## 🤔  What is Covalent?
 
-1. The slides from the talk part of the workshop (`slides.pdf`)
+Covalent is a Pythonic workflow tool that makes it easy to run and monitor *reproducible* experiments on a *distributed* patchwork of local and/or remote resources. Accessing HPC clusters, quantum computers, and other cloud services with Covalent requires little more than adding a handful of [decorators](https://realpython.com/primer-on-python-decorators/) to your existing codebase.
 
-2. Jupyter notebooks needed for the hands-on workshop (`workshop/machine_learning/similarity_learning.ipynb`)
+Please see the links below for more information.
 
-3. `code_examples` contains several simple examples different features/aspects of Covalent
+## 🔗 Quick Links
 
-## Install instructions
+### Covalent
 
-To run the jupyter notebooks used in the hands-on workshops, you will need a new `conda` environment with all of the dependencies.
+_If you enjoy this workshop, please support the project by starring the GitHub repository!_ 😎
 
-First, clone or download this repository to your local machine.
+- [GitHub](https://github.com/AgnostiqHQ/covalent) ⭐️
+- [Website](https://covalent.xyz)
+- [Documentation](https://covalent.readthedocs.io/en/latest/index.html)
+- [Tutorials](https://covalent.readthedocs.io/en/latest/tutorials/tutorials.html)
 
-Next, if you don't already have conda, navigate to <https://conda.io/projects/conda/en/latest/user-guide/install/download.html> and install the correct version for your OS for either Miniconda or Anaconda.
+### Workshop
 
-In a terminal window, navigate to root directory of this repo (`~/tutorials_covalent_aps_march_2022`) and issue
+- [Jupyter notebook](https://github.com/AgnostiqHQ/tutorials_covalent_aps_march_2023/blob/main/workshop/machine_learning/similarity_learning.ipynb) 
+- [Slides PDF](https://github.com/AgnostiqHQ/tutorials_covalent_aps_march_2023/blob/main/slides.pdf)
+- [Minimal Covalent example](https://github.com/AgnostiqHQ/tutorials_covalent_aps_march_2023/blob/main/code_examples/covalent_101/source.ipynb)
 
-`> conda env create -f environment.yml`
+## 💻 Setup Instructions
 
-This will install the `aps_march_covalent` environment. Let's activate it
+**NOTE:** _Setup requires a working [`conda` installation](https://docs.conda.io/en/latest/miniconda.html#latest-miniconda-installer-links)._
 
-`> conda activate aps_march_covalent`
+Follow the steps below to set up a local environment for this workshop.
 
-If you are confident with making this environment visible to your existing Jupyter Notebook viewer, you are done! If not, please continue with
+1. Download or clone this repository:
+```bash
+git clone https://github.com/AgnostiqHQ/tutorials_covalent_aps_march_2023/tree/main/code_examples/covalent_101
+```
 
-`> python -m ipykernel install --user --name=aps_march_covalent`
+2. Navigate to the root directory (`tutorials_covalent_aps_march_2022`) on your local filesystem.
 
-then issue
+3. Create new conda environment:
+```bash
+conda env create -f environment.yml
+```
 
-`> jupyter notebook &`
+5. Activate the new conda environment:
+```bash
+conda activate aps_march_covalent
+```
 
-which will open a browser window in the Jupyter explorer. Navigate to the `*.ipynb` file you are interested in looking at within this repo and click it.
-
-From the top drop-down menu, select `kernel > change kernel > aps_march_covalent`. You are now good to go!
-
-
-### Start Covalent
-
-After successfully creating the conda environment, the Covalent server can be started as follows
-
+6. Start the Covalent server:
 ```bash
 covalent start
 ```
 
-Covalent can optionally be started in debug mode for more verbose logging as follows
-
+7. Start Jupyter Notebook:
 ```bash
-covalent start -d
+jupyter notebook
 ```
